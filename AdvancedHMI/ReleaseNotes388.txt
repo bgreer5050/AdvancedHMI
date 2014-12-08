@@ -1,0 +1,265 @@
+﻿V3.88
+Modbus drivers - consolidated code and refactored
+Modbus drivers - implemented subscription read optimizing
+Modbus TCP - fixed problem with multiple instances pointing to different devices
+MessageDisplayByBit - Added BitChanged and ValueChanged event
+MessageDisplayByValue - pass new and old value to ValueChangedEvent
+
+V3.87
+Modbus - Fixed a problem with bit level addressing
+ModbusRTU/TCP - Fixed Long and Floating problems
+Modbus - fixed problems stopping it from shutting down properly
+
+V3.86
+Reworked ModbusTCP
+Modbus - added bit level addressing (e.g. 40001.0)
+
+V3.85
+ModbusRTU - Fixed a problem with reading bits
+EthernetIPForPLCSLCMicro - fixed problem when using multiple instances
+
+V3.84
+Revamped ModbusTCP to current architecture
+EthernetIPforCLX would start communications very slow if the form has a large number of controls
+Added BasicTrendChart
+Added BasicDataLogger
+Fixed StackLight problem created after 3.8 conversion
+Fixed some exceptions being reported in the immediate window
+EthernetIPforCLXCom - fixed some optimizing issues
+
+V3.83
+ValueScaleOffset added to DigitalPanelMeter
+Negative values not reading with ModbusRTU
+Multiple consectutive Long Modbus values not reading correctly
+EthernetIPForCLXCom updating subscriptions staggers across PollRateOverride to eliminate com slugging
+
+V3.82
+Send ModbusRTU errors to the first subscription
+Controls would not convert a numeric value to a boolean, would return Invalid Value Returned
+EthernetIPForCLXCom problem fixed with multidimensional arrays
+
+v3.81
+GraphicInidicator PLCAddress properties were named incorrectly
+MessageDisplayByValue IniFile can now specifiy back color as 3rd parameter
+EthernetIPForCLX - fixed a synchronous read of a single bit with a DINT
+ModbusRTU would not write to Long values correctly
+Added Omron HostLink(Serial for C200 series) and FINS(Ethernet/Serial for newer controllers) drivers
+Meter2 was not updating needle position
+
+v3.80
+Restructured Solution to separate controls making C# project additions easier
+Added floating point read/write over ModbusRTU by preceding address with an "F"
+BasicLabel would not show suffix if ScaleFactor was changed from 1
+BasicButton was not going back after Highlight if BackColor was black
+NumericSevenSegment in expansion pack did not show decimal
+Visual Controls with PLCAddress* property that use boolean values, can now all be preceded with "NOT "
+All controls adapted to new model to allow easy addition of PLCAddress* properties to link properties to PLC
+If the "DisableSubscriptions" is set to True, then on startup it will not attempt to connect to PLC
+
+V3.72
+Modified to EthernetIP driver for efficiency
+
+V3.71
+DigitalPanelMeter - fixed the decimal position that was overlapping digits
+DataSubscriber - Fixed a problem that may cause DataChanged to fire twice
+EthernetIP drivers - Changed to avoid flooding the que if same packets requested multiple times
+
+V3.70
+EthernetIPforCLX - fixed a problem occurring when reading a tag for the first time (caused by TransactionNumber)
+DF1Com - Fixed some issues
+
+V3.69
+Changes in DF1Com
+ModbusRTU - implements 3.5 characters of silence between packets
+
+V3.68
+ModbusRTU - fixed prolems with reading multiple bits
+ModbusRTU - removed TreatDataAsHex property
+ModbusRTU - Changed Subscription poll timer
+ModbusRTU - Improvements to subscriptions to improve response
+ModbusRTU - Improvements to recovery from comm loss
+
+V3.67
+Fixed Cancel key action on AlphaNumeric keypad
+Added BackgroundColor property to each message in a MessageDisplayByValue
+EthernetIPforCLX - Fixed another problem when using subscription without SynchronizingObject (line 1258)
+ModbusRTU - fixed function code 6 (write single holding Register)
+
+V3.66
+ModbusRTU - Fixed problem with writing outputs (function code 5)
+
+V3.65
+Fixed problem with reading bits in ModbusRTU
+TwinCATCom - TargetIPAddress and AMSNetID can use INI file as the property value
+
+V3.64
+Added a timeout parameter for the GetTagList
+Fixed FormChangeButton if same form as already open was used so it would not hide it
+EthernetIPforCLX - Setting bit 15 on an INT type caused a Math Overflow
+EthernetIPforCLX - Fixed problem when using subscription without SynchronizingObject
+BeveledButton (Expansion pack) - Added BackColorOn property
+EthernetIPforCLX can use a *.ini filename in the IPAddress property
+	[IPAddress]
+	192.168.0.1
+
+V3.63
+Fixed CRC problem with ModbusRTU driver
+Added PLCAddressVisble to the FormChangeButton
+
+V3.62
+Cancel Message speaking when a new message is triggered
+Problem with writing to ACC and PRE on SLC driver (AllenBradleyPCCC.vb)
+Added GetTagInformation to EthernetIPforCLXCom
+Three position selector was showing incorrect when Value>2
+Removed the Powerpacks reference and the Resizer
+Fixed a problem in TwinCATCom that wouldnot allow the polling to occur
+EthernetIPforSLCMicro was closing the connection when more than one form was used with same driver
+
+V3.61
+Fixed a problem with writing a 0 to SINT and writing a bit
+Fixed a problem with the Gauge not setting CommComponent
+
+V3.60
+Fixed problem with SINT and LINT data types in CLX driver
+Fixed a problem with reading BOOL array in CLX driver
+Added HydraulicCylinderAnalog
+Fixed a problem with reading integers in ModbusTCPCom
+Fixed problem with reading R6:0.POS
+
+V3.59
+Fixed a problem with subscriptions to timer sub elements in an array in ControlLogix
+Fixed a BOOL array problem if the first bit in a subscription was not DINT aligned
+Fixed a sign issue with SINT in CLX driver
+Fixed a problem with multi-level tags using array in multiple levels
+Fixed Out of bounds problem in ModbusTCP
+Updated the OPC driver and renamed to OpcDaCom
+Added SuppressErrorDisplay property to BasicLabel
+Resolved an issue with ValueChanged event with SelectorSwitch
+Fixed problem with writing bits in a DINT tag (e.g. MyDintTag.0)
+
+V3.58
+Fixed a problem with the LinearMeterVert in the Expansion pack
+Changes made to DataSubscriber to attempt to fix Handle created errors
+Fixed a problem with DisplayTime in MessageDisplayByBit
+Fixed ModbusTCP driver
+Added PilotLight3Color
+
+V3.57
+Fixed some issues with writing to BOOL arrays
+Fixed issue with BOOL array subscriptions
+Fixed a problem causing high CPU usage
+Fixed a problem in MessageDisplayByValue that caused TextChanged event to continuously fire
+Added Port property to EthernetIPforPLCSLCMicroCom
+Added FillStyle property to BarLevel
+
+V3.56
+Resolved a warning from DF1 and simulation drivers
+
+V3.55
+Fixed problem with reading in AllenBradleyPCCC.vb
+Fixed a problem with MessageDisplayByBit
+
+V3.53
+Fixed problem with reading in AllenBradleyPCCC.vb
+Fixed a problem with the DataSubscriber
+Actuall added the resizer component
+Fixed problem with writing strings to SLC/micro
+
+V3.52
+Added Resizer component
+Removed Solution Folder causing problems with opening in VB Express
+Fixed Problem with writing to bits within integers
+Fixed problem with multiple drivers using different slot numbers
+
+V3.51
+Changed ReadSynchronous to Read
+Change ReadAsynchronous to BeginRead to comply with .NET patterns
+Changed WriteData to Write
+Removed Function BeginRead(ByVal startAddress As String) As Integer from IComComponent
+
+Changed PassCodeButton name to FormChangeButton
+
+V3.50 - Major Revisions
+Eliminated ScaleFactor properties in controls and replaced with ValueScaleFactor
+Changed all PLCAddressVisibility property names to PLCAddressVisible
+Added KeypadScaleFactor to BasicLabel and DigitalPanelMeter to allow entry to be at a different scaling that value
+Changed all PLCAddressEntry property names to PLCAddressKeypad to make it more intuitive
+Major Change-Subscription callbacks now return a PLCCommEventArgs object instead of an array strings
+New names for EthernetIP (dropped one m), now EthernetIPforPLCSLCMicroCom and EthernetIPforCLXCom
+
+New components
+DataSubscriber - used to connect to a value and fire an event when data is received
+PassCodeButton - used to open a form and prompt for a passcode before doing so
+
+Fixed a problem in some of the meters that would cause flicker
+BasicLabel now has a Value property to make it more consistant with other controls
+
+
+V3.41
+Added IniFile to MessageDisplayByValue to read messages and values from file
+File should be like this:
+0,No Messages
+1, Alarm1
+2, Alarm2
+
+Changed Events in controls to follow closer to .NET Best Practices
+Added ValueChanged Events to controls
+ConnectionEstablished and ConnectionClosed Events added to CLX driver
+Fixes to OPCComm to work with Matrikon and Bosch
+
+Replaced ReadAny with ReadSynchronous and ReadAsynchronous
+Removed all referenced to AsynMode
+
+V3.40
+Added ReadSynchronous to IComComponent and all drivers
+ReadSynchronous should now be used in place of the following:
+EthernetIPforCLXCom1.AsyncMode=False
+value=EthernetIPforCLXComm1.ReadAny("Tag1")
+
+Now becomes:
+value=EthernetIPforCLXComm1.ReadSynchronous("Tag1",1)
+
+
+Changed controls to use ReadAsynchrnous when Toggle output type set
+
+V3.34
+BarLevel would split number on Right fill direction when bar got too small
+EthernetIP issue when sync and subscriptions simultaneously
+
+V3.33
+Fixed problem with reading large numbers of element in SLC/Micro
+
+V3.32
+Fixed issue with reading large arrays in CLX driver
+Attempting to address problem when mixing Synchronous and Asynchronous reads
+
+
+V3.31
+Gauge now shows negative numbers on digital display.
+Barlevel no longer hides value when bar is too small for text
+Added TextSuffix property to Barlevel
+Fixed SetRunMode and SetProgramMode for SLC and Micro
+Fixed a display refresh issue with the Digital Panel meter when the ScaleFactor is changed
+Transparency at corners of popup keypad is not fixed
+Fixed Communication issues with PLC5
+
+V3.28
+Fixed GetTagList function in ControlLogix driver
+Fixed problem with connecting to EN2T on ControlLogix driver
+Fixed problems with SLC driver
+
+V3.27
+Based on .NET 4.0 framework
+With .NET 4.0, A Chart is available under the data group of ToolBox
+PilotLight can use different colors for on state and off state
+Added KeypadMinValue and KeypadMaxValue to BasicLabel to limit value entry
+Fixed problem with Modbus driver that would cause it to work for about 1 minute, then give index error
+Added CloseConnection to EthernetIPforPLCSLCMicro and EthernetIPforCLX
+Reworked some socket data handling inside the Ethernet/IP driver
+Changed EthernetIP drivers to eliminate First Chance Exceptions that would cause slower reads
+Fixed problem in EthernetIPforCLX driver with reading string arrays
+
+Added SpeakMessage property to MessageDisplayByValue
+Added ValueToWrite as OutputType option on BasicButton
+TwinCAT driver is part of the package again
+
