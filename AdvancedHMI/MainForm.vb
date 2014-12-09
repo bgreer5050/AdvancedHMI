@@ -44,21 +44,21 @@
         Page2.Show()
     End Sub
 
-    Private Sub PilotLight3_Click(sender As Object, e As EventArgs)
+    Private Sub PilotLight3_Click(sender As Object, e As EventArgs) Handles PilotLight3.Click
 
     End Sub
 
-    Private Sub PilotLight2_Click(sender As Object, e As EventArgs)
+    Private Sub PilotLight2_Click(sender As Object, e As EventArgs) Handles PilotLight2.Click
 
     End Sub
 
-    Private Sub PilotLight1_Click(sender As Object, e As EventArgs)
-        MessageBox.Show("ERROR")
+    Private Sub PilotLight1_Click(sender As Object, e As EventArgs) Handles PilotLight1.Click
+    End Sub
+
+    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 
    
-  
-    Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-    End Sub
 End Class
 
