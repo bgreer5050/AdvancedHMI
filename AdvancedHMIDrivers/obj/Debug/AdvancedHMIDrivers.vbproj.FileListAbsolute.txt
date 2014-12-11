@@ -1,0 +1,15 @@
+C:\Repos\HMI\AdvancedHMIDrivers\bin\Debug\AdvancedHMIDrivers.dll
+C:\Repos\HMI\AdvancedHMIDrivers\bin\Debug\AdvancedHMIDrivers.pdb
+C:\Repos\HMI\AdvancedHMIDrivers\bin\Debug\AdvancedHMIDrivers.xml
+C:\Repos\HMI\AdvancedHMIDrivers\bin\Debug\MfgControl.AdvancedHMI.Drivers.dll
+C:\Repos\HMI\AdvancedHMIDrivers\bin\Debug\OpcNetApi.Com.dll
+C:\Repos\HMI\AdvancedHMIDrivers\bin\Debug\OpcNetApi.dll
+C:\Repos\HMI\AdvancedHMIDrivers\bin\Debug\OpcComRcw.dll
+C:\Repos\HMI\AdvancedHMIDrivers\bin\Debug\OpcNetApi.xml
+C:\Repos\HMI\AdvancedHMIDrivers\bin\Debug\OpcNetApi.Com.xml
+C:\Repos\HMI\AdvancedHMIDrivers\obj\Debug\AdvancedHMIDrivers.vbprojResolveAssemblyReference.cache
+C:\Repos\HMI\AdvancedHMIDrivers\obj\Debug\AdvancedHMIDrivers.Resources.resources
+C:\Repos\HMI\AdvancedHMIDrivers\obj\Debug\AdvancedHMIDrivers.vbproj.GenerateResource.Cache
+C:\Repos\HMI\AdvancedHMIDrivers\obj\Debug\AdvancedHMIDrivers.dll
+C:\Repos\HMI\AdvancedHMIDrivers\obj\Debug\AdvancedHMIDrivers.xml
+C:\Repos\HMI\AdvancedHMIDrivers\obj\Debug\AdvancedHMIDrivers.pdb
